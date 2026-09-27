@@ -1,12 +1,14 @@
 # Teach · Français — Android app
 
-Download: [teach-francais.apk](teach-francais.apk) (Android 8.0+, about 20 MB)
+**Download the latest version from [Releases](https://github.com/mattobryan/Teach-App/releases/latest)** (Android 8.0+, about 20 MB).
+
+Direct link: https://github.com/mattobryan/Teach-App/releases/latest/download/teach-francais.apk
 
 Version 0.2.2 (build 102), built from [mattobryan/Teach](https://github.com/mattobryan/Teach) branch `matt/kotlin-android`.
 
 ## Install
 
-1. On your phone, open this page and download `teach-francais.apk`.
+1. On your phone, open the latest release and tap `teach-francais.apk` under Assets.
 2. Open it and allow installs from your browser when Android asks.
 3. Coming from the very first build (0.1)? Export your progress in its Settings, uninstall it, install this one, then import. That is needed once, because this build uses the permanent signing key.
 4. From 0.2 on, new versions install over the old one and keep your progress. The app shows "Update available" when this repo has a newer build.

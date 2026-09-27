@@ -1,0 +1,36 @@
+name: Publish APK release
+
+# Every time a new teach-francais.apk is pushed, publish it as a GitHub release
+# named after version.json, so it downloads from the Releases section.
+on:
+  push:
+    branches: [main]
+    paths: [teach-francais.apk, version.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: v
+        run: |
+          echo "name=$(jq -r .versionName version.json)" >> "$GITHUB_OUTPUT"
+          echo "code=$(jq -r .versionCode version.json)" >> "$GITHUB_OUTPUT"
+          echo "sha=$(sha256sum teach-francais.apk | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.v.outputs.name }}
+          name: Teach Français ${{ steps.v.outputs.name }}
+          make_latest: true
+          files: teach-francais.apk
+          body: |
+            **Install:** open this page on your Android phone, tap `teach-francais.apk` under Assets, then open the download and allow the install.
+
+            Version ${{ steps.v.outputs.name }} (build ${{ steps.v.outputs.code }}). Installs over any 0.2.x build and keeps your progress.
+            Coming from 0.1: export progress in its Settings, uninstall it, install this, then import.
+
+            SHA-256: `${{ steps.v.outputs.sha }}`
