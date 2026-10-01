@@ -30,7 +30,7 @@ jobs:
           body: |
             **Install:** open this page on your Android phone, tap `teach-francais.apk` under Assets, then open the download and allow the install.
 
-            Version ${{ steps.v.outputs.name }} (build ${{ steps.v.outputs.code }}). Installs over any 0.2.x build and keeps your progress.
+            Version ${{ steps.v.outputs.name }} (build ${{ steps.v.outputs.code }}). Installs over any 0.2.x or later build and keeps your progress.
             Coming from 0.1: export progress in its Settings, uninstall it, install this, then import.
 
             SHA-256: `${{ steps.v.outputs.sha }}`

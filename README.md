@@ -4,7 +4,7 @@
 
 Direct link: https://github.com/mattobryan/Teach-App/releases/latest/download/teach-francais.apk
 
-Version 0.2.2 (build 102), built from [mattobryan/Teach](https://github.com/mattobryan/Teach) branch `matt/kotlin-android`.
+Version 0.3.3 (build 103), built from [mattobryan/Teach](https://github.com/mattobryan/Teach) branch `matt/kotlin-android`.
 
 ## Install
 

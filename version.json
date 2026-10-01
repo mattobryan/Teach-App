@@ -1,7 +1,7 @@
 {
-  "versionCode": 102,
-  "versionName": "0.2.2",
+  "versionCode": 103,
+  "versionName": "0.3.3",
   "apk": "https://github.com/mattobryan/Teach-App/releases/latest/download/teach-francais.apk",
   "page": "https://github.com/mattobryan/Teach-App/releases/latest",
-  "sha256": "e7b273bf23208f60c0c59ebf1e642bcc2a12a51dd71508736a8366017d527378"
+  "sha256": "f0850f9defd04d14566939572344544b21d88159bf1d084b48c76d13f4f9d836"
 }
